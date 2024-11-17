@@ -4,20 +4,20 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url(D:\Xeno\mini-crm-app\client\public\CreateCustomer.jpg); /* Replace with the correct path */
+  background-image: url(D:\Xeno\mini-crm-app\client\public\CreateCustomer.jpg); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Other styles remain unchanged */
+
 .heading {
-  color: #1abc9c; /* Teal color for heading */
+  color: #1abc9c; 
   font-size: 32px;
   text-align: center;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 20px; /* Space between heading and form */
+  margin-bottom: 20px; 
 }
 
 .form {
@@ -25,36 +25,36 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 700px; /* Adjusted max-width */
+  max-width: 700px; 
   padding: 20px;
   border: 2px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .input {
-  width: calc(100% - 20px); /* Adjusted width calculation */
+  width: calc(100% - 20px); 
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px; /* Adjusted border-radius */
+  border-radius: 5px; 
   font-size: 16px;
 }
 
 .button {
   width: 100%;
-  padding: 15px 30px; /* Adjusted padding */
-  background-color: #20B2AA; /* Changed background color */
+  padding: 15px 30px;
+  background-color: #20B2AA; 
   color: white;
   border: none;
-  border-radius: 5px; /* Adjusted border-radius */
+  border-radius: 5px; 
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 10px; /* Added margin-top */
+  margin-top: 10px; 
 }
 
 .button:hover {
-  background-color: #16a085; /* Darker teal on hover */
+  background-color: #16a085; 
 }

@@ -71,7 +71,7 @@ const AudienceForm = () => {
 
   return (
     <div className="centered-container">
-      <h1 className="heading">Create Campaign</h1>
+      <h1 className="heading">New Campaign</h1>
       <div className="form-container">
         {thankYouMessage && (
           <div className="thank-you-popup">
@@ -131,7 +131,7 @@ const AudienceForm = () => {
                                 className="remove-button"
                                 onClick={() => remove(index)}
                               >
-                                X
+                                Remove
                               </button>
                             </div>
                           </div>
@@ -141,7 +141,7 @@ const AudienceForm = () => {
                         className="add-rule-button"
                         onClick={() => push({ field: '', operator: '', value: '' })}
                       >
-                        Add Rule
+                        New Rule
                       </button>
                     </div>
                   )}
@@ -161,7 +161,7 @@ const AudienceForm = () => {
                 </div>
 
                 <div className="scheduled-at-field">
-                  <label htmlFor="scheduledAt">Scheduled At (Date & Time):</label>
+                  <label htmlFor="scheduledAt">Scheduled At : </label>
                   <Field
                     name="scheduledAt"
                     type="datetime-local"
@@ -183,7 +183,7 @@ const AudienceForm = () => {
 
                 <div className="submit-button">
                   <button type="submit" className="submit-button" disabled={isSubmitting}>
-                    Create Campaign
+                    New Campaign
                   </button>
                 </div>
               </Form>

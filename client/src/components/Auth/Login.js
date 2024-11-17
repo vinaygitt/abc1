@@ -67,7 +67,6 @@ const Login = ({ onLogin }) => {
 
       const data = await response.json();
       if (data.success) {
-        // Store the dummy Google ID for consistent session handling
         localStorage.setItem('googleId', data.googleId || 'dummy-google-id');
         onLogin();
         navigate('/home'); // Redirect to home
@@ -91,8 +90,8 @@ const Login = ({ onLogin }) => {
       }}
     >
       <div className={styles['login-container']}>
-        <h1 className={styles['title']}>Welcome to CRM</h1>
-        <p className={styles['subtitle']}>Effortlessly build stronger customer connections.</p>
+        <h1 className={styles['title']}>Welcome to Mini-CRM</h1>
+        <p className={styles['subtitle']}>Seamlessly foster deeper connections with your customers.</p>
         <div className={styles['login-box']}>
           {/* Username and Password Login Form */}
           <form onSubmit={handleLogin} className={styles['login-form']}>

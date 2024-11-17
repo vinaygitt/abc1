@@ -47,7 +47,7 @@ const CustomerForm = () => {
 
   return (
     <div className="centered-container">
-      <h1 className="heading">Create Customer</h1>
+      <h1 className="heading">New Customer</h1>
       <form onSubmit={handleSubmit} className="customer-form">
         <div className="form-group">
           <input
@@ -73,7 +73,7 @@ const CustomerForm = () => {
           {errors.email && <div className="error">{errors.email}</div>}
         </div>
 
-        <button type="submit" className="submit-button">Create Customer</button>
+        <button type="submit" className="submit-button">New Customer</button>
       </form>
     </div>
   );

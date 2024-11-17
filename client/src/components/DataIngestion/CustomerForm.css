@@ -3,53 +3,53 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 700px; /* Adjusted max-width to match AudienceForm */
+    max-width: 700px; 
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid #ddd; /* Adjusted border width */
-    border-radius: 10px; /* Adjusted border-radius */
+    border: 2px solid #ddd; 
+    border-radius: 10px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
   }
   
   .input-field {
-    width: calc(100% - 20px); /* Adjusted width calculation */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px; /* Adjusted border-radius */
+    border-radius: 5px; 
     font-size: 16px;
   }
   
   .input-field:focus {
-    border-color: #20B2AA; /* Changed focus border color */
+    border-color: #20B2AA; 
     outline: none;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Changed focus shadow color */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); 
   }
   
   .submit-button {
     width: 100%;
-    padding: 15px 30px; /* Adjusted padding */
-    background-color: #20B2AA; /* Changed background color */
+    padding: 15px 30px;
+    background-color: #20B2AA;
     color: white;
     border: none;
-    border-radius: 5px; /* Adjusted border-radius */
+    border-radius: 5px; 
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 10px; /* Added margin-top */
+    margin-top: 10px; 
   }
   
   .submit-button:hover {
-    background-color: #20B2AA; /* Changed hover background color */
+    background-color: #20B2AA; 
   }
   
   .error {
-    color: #f44336; /* Adjusted error color */
+    color: #f44336;
     font-size: 14px;
   }
   
-  /* Enhanced styling for the Create Customer heading */
+ 
   .heading {
     font-size: 2.5rem;
     color: #333;
@@ -82,14 +82,14 @@
     margin-bottom: 10px;
   }
 
-  /* Full-page background styling */
+  
 .centered-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url(D:\Xeno\mini-crm-app\client\public\CreateCustomer.jpg); /* Path to your image in the public folder */
+  background-image: url(D:\Xeno\mini-crm-app\client\public\CreateCustomer.jpg); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

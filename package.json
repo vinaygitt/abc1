@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "cron": "^3.2.1",
+    "node-cron": "^3.0.3"
   }
 }

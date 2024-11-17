@@ -1,4 +1,4 @@
-/* Home.css */
+
 
 body {
   font-family: Arial, sans-serif;
@@ -24,12 +24,12 @@ body {
   padding: 0;
   display: flex;
   align-items: center;
-  width: 100%; /* Make the ul take full width */
+  width: 100%; 
 }
 
 .navbar li {
   display: inline;
-  margin-right: 20px; /* Adds spacing between items */
+  margin-right: 20px; 
 }
 
 .navbar li a,
@@ -42,7 +42,7 @@ body {
   transition: color 0.3s, transform 0.3s;
 }
 
-/* Hover effect for links and buttons */
+
 .navbar li a:hover,
 .navbar li button:hover {
   color: #20B2AA;
@@ -50,7 +50,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Make Logout button move to the far right */
+
 .logout-button {
   margin-left: auto;
 }

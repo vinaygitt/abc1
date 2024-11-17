@@ -1,4 +1,4 @@
-/* components/HomePage.css */
+
 
 body {
   font-family: 'Arial', sans-serif;
@@ -14,13 +14,13 @@ body {
   border-radius: 10px;
   max-width: 900px;
   margin: 40px auto;
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  background-color: rgba(255, 255, 255, 0.9); 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 }
 
 .home-page:hover {
-  transform: scale(1.01); /* Subtle zoom on hover */
+  transform: scale(1.01); 
 }
 
 .home-page-title {

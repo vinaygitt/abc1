@@ -1,69 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import { getCampaigns } from '../../services/api';
-// import './CampaignList.css';
-
-// const CampaignList = () => {
-//   const [campaigns, setCampaigns] = useState([]);
-
-//   useEffect(() => {
-//     const fetchCampaigns = async () => {
-//       try {
-//         const campaignsData = await getCampaigns();
-//         console.log("Fetched Campaigns:", campaignsData);
-//         setCampaigns(campaignsData || []); // Assume campaignsData is an array directly
-//       } catch (err) {
-//         console.error("Error fetching campaigns:", err);
-//       }
-//     };
-
-//     fetchCampaigns();
-//   }, []);
-
-//   const getAudienceSize = (audience) => {
-//     if (!audience || !Array.isArray(audience)) return 'N/A';
-//     const sizeInfo = audience.find((aud) => aud && 'audienceSize' in aud);
-//     return sizeInfo ? sizeInfo.audienceSize : 'N/A';
-//   };
-
-//   return (
-//     <div>
-//       <h2 className="heading">Past Campaigns</h2>
-//       <table className="table">
-//         <thead>
-//           <tr>
-//             <th className="message-column">Message</th>
-//             <th className="sentAt-column">Sent At</th>
-//             <th>Status</th>
-//             <th>Audience Size</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {campaigns.length > 0 ? (
-//             campaigns.map((campaign) => (
-//               <tr key={campaign._id}>
-//                 <td className="message-column">{campaign.message}</td>
-//                 <td className="sentAt-column">
-//                   {campaign.sentAt ? new Date(campaign.sentAt).toLocaleString() : 'N/A'}
-//                 </td>
-//                 <td>{campaign.status || 'N/A'}</td>
-//                 <td>{getAudienceSize(campaign.audience)}</td>
-//               </tr>
-//             ))
-//           ) : (
-//             <tr>
-//               <td colSpan="4" style={{ textAlign: 'center' }}>No campaigns available</td>
-//             </tr>
-//           )}
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// };
-
-// export default CampaignList;
-
-
-
 import React, { useState, useEffect } from 'react';
 import { getCampaigns, deleteCampaign } from '../../services/api';
 import './CampaignList.css';
@@ -73,23 +7,22 @@ const CampaignList = () => {
 
   useEffect(() => {
     const fetchCampaigns = async () => {
-      // Extract googleId from query params if redirected after OAuth login
       const urlParams = new URLSearchParams(window.location.search);
       const googleIdFromUrl = urlParams.get('googleId');
 
       if (googleIdFromUrl) {
-        localStorage.setItem('googleId', googleIdFromUrl); // Store googleId in local storage
-        window.history.replaceState({}, document.title, '/home'); // Remove googleId from the URL
+        localStorage.setItem('googleId', googleIdFromUrl); 
+        window.history.replaceState({}, document.title, '/home'); 
       }
 
-      const googleId = localStorage.getItem('googleId'); // Retrieve googleId from local storage
+      const googleId = localStorage.getItem('googleId'); 
       if (!googleId) {
         console.error('googleId not found in localStorage.');
         return;
       }
 
       try {
-        const campaignsData = await getCampaigns(googleId); // Pass googleId to the API call
+        const campaignsData = await getCampaigns(googleId); 
         setCampaigns(campaignsData.data);
       } catch (err) {
         console.error('Error fetching campaigns:', err);
@@ -104,7 +37,7 @@ const CampaignList = () => {
     if (confirmDelete) {
       try {
         await deleteCampaign(id);
-        setCampaigns(campaigns.filter(campaign => campaign._id !== id)); // Update state after deletion
+        setCampaigns(campaigns.filter(campaign => campaign._id !== id)); 
       } catch (err) {
         console.error('Error deleting campaign:', err);
       }

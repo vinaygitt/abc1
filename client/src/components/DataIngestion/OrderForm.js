@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { createOrder } from '../../services/api'; // Ensure this is the correct path to your API file
+import { createOrder } from '../../services/api'; 
 import './OrderForm.css';
 
 const OrderForm = () => {
   const [customerId, setCustomerId] = useState('');
   const [amount, setAmount] = useState('');
   const [errors, setErrors] = useState({});
-  const [apiError, setApiError] = useState(''); // State for backend error
+  const [apiError, setApiError] = useState(''); 
 
   const validate = () => {
     const newErrors = {};
@@ -39,16 +39,16 @@ const OrderForm = () => {
       setCustomerId('');
       setAmount('');
       setErrors({});
-      setApiError(''); // Clear any previous backend error
+      setApiError(''); 
     } catch (err) {
       console.error('Error creating order:', err);
-      setApiError(err.response?.data?.message || 'Error creating order'); // Display backend error if available
+      setApiError(err.response?.data?.message || 'Error creating order'); 
     }
   };
 
   return (
     <div className="container">
-      <h2 className="heading">Create Order</h2>
+      <h2 className="heading">New Order</h2>
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
           <input
@@ -72,8 +72,8 @@ const OrderForm = () => {
           />
           {errors.amount && <div className="error">{errors.amount}</div>}
         </div>
-        <button type="submit" className="button" disabled={Object.keys(errors).length > 0}>Create Order</button>
-        {apiError && <div className="error">{apiError}</div>} {/* Display backend error */}
+        <button type="submit" className="button" disabled={Object.keys(errors).length > 0}>New Order</button>
+        {apiError && <div className="error">{apiError}</div>} {/* backend error */}
       </form>
     </div>
   );

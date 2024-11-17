@@ -1,4 +1,4 @@
-// components/HomePage.js
+//buttons description page
 import React from 'react';
 import './HomePage.css';
 import { FaUserPlus, FaClipboardList, FaUsers, FaListAlt } from 'react-icons/fa';
@@ -6,28 +6,28 @@ import { FaUserPlus, FaClipboardList, FaUsers, FaListAlt } from 'react-icons/fa'
 const HomePage = () => {
   return (
     <>
-      <div className="background-image"></div> {/* Background Image Div */}
+      <div className="background-image"></div>
       
       <div className="home-page">
         <h1 className="home-page-title">Welcome to the Mini-CRM Application</h1>
-        <p className="home-page-intro">Here's how you can use the application:</p>
+        <p className="home-page-intro">Here’s a guide to help you navigate the application:</p>
         <ul className="home-page-list">
           <li>
             <FaUserPlus className="icon" />
             <div className="content">
-              <strong>Create Customer Button:</strong> To create a new user.
+              <strong>New Customer Button:</strong> To create a new user.
             </div>
           </li>
           <li>
             <FaClipboardList className="icon" />
             <div className="content">
-              <strong>Create Order Button:</strong> Create an order based on a user. Collects total spend, number of visits, and last visited metrics.
+              <strong>New Order Button:</strong> Create an order based on a user. Collects total spend, number of visits, and last visited metrics.
             </div>
           </li>
           <li>
             <FaUsers className="icon" />
             <div className="content">
-              <strong>Create Audience Button:</strong> To create a campaign based on an audience of customers with the following criteria:
+              <strong>New Audience Button:</strong> To create a campaign based on an audience of customers with the following criteria:
               <ul className="nested-list">
                 <li>Customers with total spends &gt; INR 10,000</li>
                 <li>Customers with total spends &gt; INR 10,000 AND max number of visits are 3</li>
