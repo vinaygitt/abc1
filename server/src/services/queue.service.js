@@ -6,7 +6,7 @@ const createChannel = async () => {
   try {
     const connection = await amqp.connect('amqp://127.0.0.1:5672'); // Correct
     connection.on('error', (err) => {
-      console.error('AMQP connection error:', err.message);
+      console.error('AMQP connection error:', err.message);  //Error
     });
   
     const channel = await connection.createChannel();

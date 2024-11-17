@@ -53,7 +53,7 @@ const handleMessage = async (message) => {
         break;
         
       case 'UPDATE_COMMUNICATION_LOG':
-        // No operation for this case
+        
         break;
         
       default:

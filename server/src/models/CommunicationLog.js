@@ -1,21 +1,8 @@
-// const mongoose = require('mongoose');
-
-// const communicationLogSchema = new mongoose.Schema({
-//   audience: { type: mongoose.Schema.Types.Mixed},
-//   message: { type: String, required: true },
-//   sentAt: { type: Date, default: Date.now },
-//   status: { type: String, enum: ['SENT', 'FAILED'], default: 'SENT' },
-// });
-
-// const CommunicationLog = mongoose.model('CommunicationLog', communicationLogSchema);
-
-// module.exports = CommunicationLog;
-
-
+//models/CommunicationLog.js
 const mongoose = require('mongoose');
 
 const communicationLogSchema = new mongoose.Schema({
-  googleId: { type: String, ref: 'User', required: true }, // Reference googleId from User schema
+  googleId: { type: String, ref: 'User', required: true }, 
   audience: { type: mongoose.Schema.Types.Mixed },
   message: { type: String, required: true },
   sentAt: { type: Date, default: null },
