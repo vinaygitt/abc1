@@ -7,22 +7,22 @@ This is a Mini CRM (Customer Relationship Management) Application developed usin
 - **Audience Creation**: A web application where users can create audiences based on rules such as total spend, number of visits, and last visit date. Users can combine multiple rules using AND/OR operators and check the audience size before saving.
 - **Campaign Management**: Users can send personalized campaigns to the created audiences and track the delivery statuses (sent or failed) of the campaigns.
 - **Google Authentication**: Users can authenticate using their Google accounts to access the application.
-- **Scalability and Performance Optimizations**: The application implements a pub/sub model using a message broker  for data ingestion and delivery receipt updates. It also supports batch processing for database operations to improve performance.
+- **Scalability and Performance Optimizations**: The application implements a pub/sub model using a message broker for data ingestion and delivery receipt updates. It also supports batch processing for database operations to improve performance.
 
 ## Tech Stack
 
 - **Frontend**: React.js
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
-- **Message Broker**: RabbitMQ
-- **Authentication**: Google Authentication
+- **Message Broker**: RabbitMQ 
+- **Authentication**: Google Authentication 
 
 ## Installation
 
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/vinaygitt/mini-crm-xeno.git
+    git clone https://github.com/vinaygitt/mini-crm-app.git
     ```
 
 2. **Install server dependencies**:
@@ -75,4 +75,3 @@ The client will be running at `http://localhost:3000` and the server at `http://
 3. **Ingest Data**: Use the "Create Customer" and "Create Order" sections.
 4. **Create Audience**: Define rules to create a new audience.
 5. **Manage Campaigns**: View past campaigns and their delivery stats in the "Campaign List" section. Send new campaigns to created audiences.
-
